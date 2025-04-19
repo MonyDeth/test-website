@@ -64,7 +64,7 @@ body, html {
 /* Top and bottom horizontal lines */
 .line.top,
 .line.bottom {
-    background: linear-gradient(90deg, #D1C5AD 10%, rgba(255, 255, 255, 0.00) 25%,rgba(255, 255, 255, 0.00) 75%, #D1C5AD 100%);
+    background: linear-gradient(90deg, #D1C5AD 20%, rgba(255, 255, 255, 0.00) 25%,rgba(255, 255, 255, 0.00) 75%, #D1C5AD 90%);
     height: 3px;
     left: var(--frame-padding);
     right: var(--frame-padding);
@@ -81,7 +81,7 @@ body, html {
 /* Left and right vertical lines */
 .line.left,
 .line.right {
-    background: linear-gradient(180deg, #D1C5AD 10%, rgba(255, 255, 255, 0.00) 25%,rgba(255, 255, 255, 0.00) 75%, #D1C5AD 100%);
+    background: linear-gradient(180deg, #D1C5AD 20%, rgba(255, 255, 255, 0.00) 25%,rgba(255, 255, 255, 0.00) 75%, #D1C5AD 90%);
     width: 3px;
     top: var(--frame-padding);
     bottom: var(--frame-padding);
@@ -93,6 +93,38 @@ body, html {
 
 .line.right {
     right: var(--frame-padding);
+}
+
+.social-button {
+    text-decoration: none !important;
+    height: fit-content;
+    border-radius: 12px;
+    gap: 10px;
+    border: 2px solid #3F0076;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.25);
+    transition: 300ms ease;
+}
+.social-button > i{
+    font-size: 2rem;
+}
+.button_container{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.social-button:hover{
+    background-color: #3F0076;
+    color: white;
+    border-radius: 24px ;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
 /* Centered Text */
