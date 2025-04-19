@@ -11,7 +11,7 @@
 body, html {
     height: 100%;
     width: 100%;
-    background: black;
+    background: linear-gradient(180deg, #FFFBF2 0%,#FFE2FB 50%, #C5E5FD 100%);
     color: #3F0076;
     font-family: sans-serif;
 }
