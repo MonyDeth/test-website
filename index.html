@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Canvas Grid</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Border Frame</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-<div class="main">
-    <div class="logo-container">
-        <img src="asset/images/logo.png" style="height: 100px" alt="logo">
+<div class="frame">
+    <!-- Corner SVGs -->
+    <div class="corner top-left">
+        <img src="asset/vectors/corner_2.svg" alt="Top Left" style="rotate: 90deg" />
     </div>
-    <h1>Interactive Canvas Grid</h1>/
-    <div class="pattern">
-        <img src="pattern.svg" alt="Interactive Canvas Grid">\
+    <div class="corner top-right">
+        <img src="asset/vectors/corner_2.svg" alt="Top Right" style="rotate: 180deg" />
     </div>
-</div>
-<div class="events-bg">
-</div>
+    <div class="corner bottom-left">
+        <img src="asset/vectors/corner_2.svg" alt="Bottom Left"/>
+    </div>
+    <div class="corner bottom-right">
+        <img src="asset/vectors/corner_2.svg" alt="Bottom Right" style="rotate: -90deg"/>
+    </div>
 
-<script type="module">
-    import { initCanvasGrid } from './index.js';
-    document.addEventListener("DOMContentLoaded", initCanvasGrid);
-</script>
+    <!-- Border lines -->
+    <div class="line top"></div>
+    <div class="line bottom"></div>
+    <div class="line left"></div>
+    <div class="line right"></div>
+
+    <!-- Center content -->
+    <div class="center-text">hello</div>
+</div>
 </body>
 </html>

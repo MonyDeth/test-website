@@ -1,28 +1,118 @@
+:root {
+    --frame-padding: 40px; /* 👈 change this value to adjust the border inset */
+}
 
-body, html {
+* {
     margin: 0;
     padding: 0;
-    height: 100%;
-    overflow: hidden;
-    background-color: #3F031E;
-    font-family: Inter sans-serif;
-
+    box-sizing: border-box;
 }
-.events-bg {
+
+body, html {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, #FFFBF2 0%,#FFE2FB 50%, #C5E5FD 100%);
+    color: #3F0076;
+    font-family: sans-serif;
+}
+
+.frame {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Corner SVGs */
+.corner {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}
+
+.corner img {
     width: 100%;
     height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+    object-fit: contain;
 }
-.pattern{
-    position: absolute;
-    top: 50vh;
+
+.top-left {
+    top: var(--frame-padding);
+    left: var(--frame-padding);
 }
-.main{
-    position: absolute;
-    z-index: 1;
+
+.top-right {
+    top: var(--frame-padding);
+    right: var(--frame-padding);
 }
-h1, h2, h3, h4, h5, h6, p {
-    color: white;
+
+.bottom-left {
+    bottom: var(--frame-padding);
+    left: var(--frame-padding);
+}
+
+.bottom-right {
+    bottom: var(--frame-padding);
+    right: var(--frame-padding);
+}
+
+/* Border Lines */
+.line {
+    position: absolute;
+    background: #fff;
+}
+
+/* Top and bottom horizontal lines */
+.line.top,
+.line.bottom {
+    background: linear-gradient(90deg, #D1C5AD 10%, rgba(255, 255, 255, 0.00) 25%,rgba(255, 255, 255, 0.00) 75%, #D1C5AD 100%);
+    height: 3px;
+    left: var(--frame-padding);
+    right: var(--frame-padding);
+}
+
+.line.top {
+    top: var(--frame-padding);
+}
+
+.line.bottom {
+    bottom: var(--frame-padding);
+}
+
+/* Left and right vertical lines */
+.line.left,
+.line.right {
+    background: linear-gradient(180deg, #D1C5AD 10%, rgba(255, 255, 255, 0.00) 25%,rgba(255, 255, 255, 0.00) 75%, #D1C5AD 100%);
+    width: 3px;
+    top: var(--frame-padding);
+    bottom: var(--frame-padding);
+}
+
+.line.left {
+    left: var(--frame-padding);
+}
+
+.line.right {
+    right: var(--frame-padding);
+}
+
+/* Centered Text */
+.center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Responsive corner SVGs */
+@media (max-width: 600px) {
+    :root {
+        --frame-padding: 20px;
+    }
+
+    .corner {
+        width: 35px;
+        height: 35px;
+    }
 }
