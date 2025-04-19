@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Canvas Grid</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="main">
+    <div class="logo-container">
+        <img src="asset/images/logo.png" style="height: 100px" alt="logo">
+    </div>
+    <h1>Interactive Canvas Grid</h1>/
+    <div class="pattern">
+        <img src="pattern.svg" alt="Interactive Canvas Grid">\
+    </div>
+</div>
+<div class="events-bg">
+</div>
+
+<script type="module">
+    import { initCanvasGrid } from './index.js';
+    document.addEventListener("DOMContentLoaded", initCanvasGrid);
+</script>
+</body>
+</html>
