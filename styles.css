@@ -1,6 +1,9 @@
 :root {
     --frame-padding: 40px; /* 👈 change this value to adjust the border inset */
 }
+html{
+    scroll-behavior: none;
+}
 
 * {
     margin: 0;
@@ -14,6 +17,7 @@ body, html {
     background: linear-gradient(180deg, #FFFBF2 0%,#FFE2FB 50%, #C5E5FD 100%);
     color: #3F0076;
     font-family: sans-serif;
+
 }
 
 .frame {
@@ -133,6 +137,73 @@ body, html {
     background-color: #3F0076;
     color: white;
 }
+.section {
+    min-height: 100vh; /* full-screen height */
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.about, .projects, .contact {
+    background: #fff;
+    color: #3F0076;
+}
+.projects{
+    background: #f2e5ff;
+}
+.content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.project-card {
+    background-color: #f3f0ff;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.1);
+}
+
+.logo-carousel {
+    margin-top: 40px;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.carousel-track img {
+    height: 60px;
+    width: auto;
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.1));
+}
+
+footer.contact {
+    background: #3F0076;
+    color: white;
+    padding-bottom: 60px;
+}
+
+footer a {
+    color: #FFE2FB;
+    text-decoration: underline;
+}
+
 
 /* Responsive corner SVGs */
 @media (max-width: 600px) {
