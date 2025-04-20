@@ -2,7 +2,7 @@
     --frame-padding: 40px; /* 👈 change this value to adjust the border inset */
 }
 html{
-    scroll-behavior: none;
+    scroll-behavior: auto;
 }
 
 * {
