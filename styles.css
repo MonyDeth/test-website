@@ -140,12 +140,13 @@ body, html {
     color: white;
 }
 .section {
-    min-height: 100vh; /* full-screen height */
+    min-height: 100vh; /* Ensure sections are full screen */
     padding: 80px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    overflow: hidden; /* Prevent extra scrolling issues on mobile */
 }
 
 .about, .projects, .contact {
@@ -216,5 +217,29 @@ footer a {
     .corner {
         width: 35px;
         height: 35px;
+    }
+    .frame {
+        padding: 0 10px;
+    }
+    .corner {
+        width: 30px;
+        height: 30px;
+    }
+    .corner img {
+        object-fit: contain;
+    }
+
+    .section {
+        padding: 50px 15px; /* Adjust padding */
+    }
+
+    /* Responsive footer adjustments */
+    footer.contact {
+        padding: 20px 10px; /* Adjust footer padding for smaller screens */
+    }
+
+    .social-button {
+        font-size: 1rem; /* Make buttons smaller */
+        padding: 8px 15px;
     }
 }
