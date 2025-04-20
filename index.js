@@ -22,18 +22,27 @@ function scrollToSection(index) {
     });
 }
 
-// GSAP Observer to capture wheel/touch inputs
+// GSAP Observer to capture wheel/touch/pointer inputs
 Observer.create({
-    type: "wheel,touch,pointer",
-    tolerance: 10,
-    preventDefault: true,
-    onUp: () => scrollToSection(currentIndex - 1),
-    onDown: () => scrollToSection(currentIndex + 1),
+    type: "wheel,touch,pointer", // Handle wheel, touch, and pointer events
+    tolerance: 10,  // Adjust sensitivity for detecting scroll
+    preventDefault: true,  // Prevent default scrolling behavior to make custom smooth scrolling
+    onUp: () => scrollToSection(currentIndex - 1),  // Scroll up behavior
+    onDown: () => scrollToSection(currentIndex + 1),  // Scroll down behavior
+    trigger: ".projects",  // Trigger effect when "projects" section is in view
+    start: "top bottom",  // Start trigger when section is at the bottom of viewport
+    end: "bottom top",  // End trigger when section reaches top of viewport
+    markers: false, // Remove for production, used for debugging
+    scrub: 1,  // Ensures smooth and synced scroll animation
+    invalidateOnRefresh: true,  // Recalculate on window resize or refresh
+
+    // Mobile touch behavior: You may want to adjust these for better user experience
+    onTouchStart: () => {
+        // Optional: Prevent touch to scroll issues or ensure smoother behavior
+    }
 });
 
 // Optional: jump to section on load (scroll to top)
 window.addEventListener("load", () => {
     gsap.set(window, { scrollTo: sections[0] });
 });
-
-
