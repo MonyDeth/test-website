@@ -140,13 +140,12 @@ body, html {
     color: white;
 }
 .section {
-    min-height: 100vh; /* Ensure sections are full screen */
+    min-height: 100vh; /* full-screen height */
     padding: 80px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    overflow: hidden; /* Prevent extra scrolling issues on mobile */
 }
 
 .about, .projects, .contact {
@@ -211,15 +210,11 @@ footer a {
 /* Responsive corner SVGs */
 @media (max-width: 600px) {
     :root {
-        --frame-padding: 20px;
+        --frame-padding: 15px;
     }
-
     .corner {
         width: 35px;
         height: 35px;
-    }
-    .frame {
-        padding: 0 10px;
     }
     .corner {
         width: 30px;
