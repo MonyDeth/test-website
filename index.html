@@ -6,38 +6,46 @@
     <title>Border Frame</title>
     <link rel="stylesheet" href="styles.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="frame">
-    <section class="section landing">
-        <!-- Corner SVGs -->
-        <div class="corner top-left">
-            <img src="asset/vectors/corner_2.svg" alt="Top Left" style="rotate: 90deg" />
+    <div class="header">
+        <div class="logo-wrapper">
+            <img class="logo" src="asset/vectors/logo_1.svg" alt="logo">
+            <p>(c)monydeth</p>
         </div>
-        <div class="corner top-right">
-            <img src="asset/vectors/corner_2.svg" alt="Top Right" style="rotate: 180deg" />
+
+        <div class="navigation">
+            <ul class="nav-menu">
+                <li href="#"><a> home </a></li>
+                <li href="#"><a> projects </a></li>
+                <li href="#"><a> contact </a></li>
+            </ul>
         </div>
-        <div class="corner bottom-left">
-            <img src="asset/vectors/corner_2.svg" alt="Bottom Left"/>
-        </div>
-        <div class="corner bottom-right">
-            <img src="asset/vectors/corner_2.svg" alt="Bottom Right" style="rotate: -90deg"/>
-        </div>
-        <!-- Border lines -->
-        <div class="line top"></div>
-        <div class="line bottom"></div>
-        <div class="line left"></div>
-        <div class="line right"></div>
-        <!-- Center content -->
-        <div class="center-text">
-            <h1>hello</h1>
-            <div class="button_container">
-                <a class="social-button" href="https://www.facebook.com/mony.deth46" target="_blank" rel="noopener noreferrer"><i class="ri-facebook-box-fill"></i> Facebook</a>
-                <a class="social-button" href="https://www.linkedin.com/in/monydeth/" target="_blank" rel="noopener noreferrer"><i class="ri-linkedin-box-fill"></i> LinkedIn</a>
-                <a class="social-button" href="https://www.linkedin.com/in/monydeth/" target="_blank" rel="noopener noreferrer"><i class="ri-behance-fill"></i> Behance</a>
+    </div>
+
+    <section class="section landing ">
+        <div class="intro-grid">
+            <div class="intro-text">
+                <h1>i’m monydeth</h1>
+                <p>UX UI & Graphic Designer</p>
+            </div>
+
+            <div class="sub-intro-text">
+                <p>
+                    Transforming your creative vision into standout digital designs for a world that never stops changing.
+                </p>
+                <a class="work-button">
+                    <p>see my works</p><i class="ri-arrow-right-up-line"></i>
+                </a>
             </div>
         </div>
+            <div class="intro-art"></div>
+
     </section>
+
     <!-- About Me Section -->
     <section class="section about" id="about">
         <div class="content">
@@ -81,12 +89,6 @@
             <!-- Reuse your social buttons if you like -->
         </div>
     </footer>
-</div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Observer.min.js"></script>
-    <script src="index.js"></script>
 
 </body>
 </html>

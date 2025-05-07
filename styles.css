@@ -10,98 +10,14 @@ html{
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    -webkit-overflow-scrolling: touch;
-}
 body, html {
     height: 100%;
     width: 100%;
-    background: linear-gradient(180deg, #FFFBF2 0%,#FFE2FB 50%, #C5E5FD 100%);
-    color: #3F0076;
-    font-family: sans-serif;
+    color: #2A2A2A;
     touch-action: manipulation; /* Disable touch zoom on some devices */
+    font-family: "Kumbh Sans", sans-serif;
 }
 
-.frame {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-}
-
-/* Corner SVGs */
-.corner {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-}
-
-.corner img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.top-left {
-    top: var(--frame-padding);
-    left: var(--frame-padding);
-}
-
-.top-right {
-    top: var(--frame-padding);
-    right: var(--frame-padding);
-}
-
-.bottom-left {
-    bottom: var(--frame-padding);
-    left: var(--frame-padding);
-}
-
-.bottom-right {
-    bottom: var(--frame-padding);
-    right: var(--frame-padding);
-}
-
-/* Border Lines */
-.line {
-    position: absolute;
-    background: #fff;
-}
-
-/* Top and bottom horizontal lines */
-.line.top,
-.line.bottom {
-    background: linear-gradient(90deg, #D1C5AD 20%, rgba(255, 255, 255, 0.00) 25%,rgba(255, 255, 255, 0.00) 75%, #D1C5AD 90%);
-    height: 3px;
-    left: var(--frame-padding);
-    right: var(--frame-padding);
-}
-
-.line.top {
-    top: var(--frame-padding);
-}
-
-.line.bottom {
-    bottom: var(--frame-padding);
-}
-
-/* Left and right vertical lines */
-.line.left,
-.line.right {
-    background: linear-gradient(180deg, #D1C5AD 20%, rgba(255, 255, 255, 0.00) 25%,rgba(255, 255, 255, 0.00) 75%, #D1C5AD 90%);
-    width: 3px;
-    top: var(--frame-padding);
-    bottom: var(--frame-padding);
-}
-
-.line.left {
-    left: var(--frame-padding);
-}
-
-.line.right {
-    right: var(--frame-padding);
-}
-
-/* Centered Text */
 .center-text {
     position: absolute;
     top: 50%;
@@ -110,48 +26,20 @@ body, html {
     font-size: 2rem;
     text-align: center;
 }
-.social-button {
-    color: #3F0076;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    text-decoration: none !important;
-    height: fit-content;
-    border-radius: 12px;
-    gap: 10px;
-    border: 2px solid #3F0076;
-    font-size: 1.4rem;
-    transition: 300ms ease;
-}
-.social-button > i{
-    font-size: 2rem;
-}
-.button_container{
-    width: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-.social-button:hover{
-    background-color: #3F0076;
-    color: white;
-}
+
+
 .section {
     min-height: 100vh; /* full-screen height */
-    padding: 80px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
 }
+.landing{
+    background: linear-gradient(180deg, #FFFBF2 0%,#FFE2FB 50%, #C5E5FD 100%);
 
-.about, .projects, .contact {
-    background: #fff;
-    color: #3F0076;
 }
+
 .projects{
     background: #f2e5ff;
 }
@@ -206,9 +94,133 @@ footer a {
     text-decoration: underline;
 }
 
+.logo-wrapper{
+    justify-content: start;
+    display: flex;
+    align-items: center;
+}
+.logo-wrapper p{
+    color: #000000;
+    font-size: 1.3rem;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding:  1rem 2rem 0 2rem;
+    background: #FFFBF2;
+}
+.nav-menu{
+    display: flex;
+    gap:2rem;
+    height: 100%;
+    justify-content: center;
+}
+.nav-menu a{
+    color: #000000;
+    height: auto;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.nav-menu li{
+    transition: 300ms ease;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    overflow: hidden;
+}
+.nav-menu li:hover{
+    translate: 0 -.5rem;
+    font-weight: 900;
+}
+.navigation{
+    display: flex;
+    align-items: center;
+
+}
+.logo{
+    height: auto;
+    width: 4rem;
+}
+    .intro-text{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    .sub-intro-text{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    .sub-intro-text p{
+        text-align: start;
+    }
+    .work-button{
+        padding: .7rem;
+        border: 1px solid #BCBCBC;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 700;
+        width: 16rem;
+        transition: 300ms ease;
+        cursor: pointer;
+    }
+    .work-button:hover{
+        background: #b6b6b6;
+        translate: 0 -.5rem;
+    }
+.work-button a{
+    align-items: center;
+}
+.sub-intro-text i{
+    font-size: 1.3rem;
+}
+    .sub-intro-text{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 1rem;
+    }
+    .intro-art{
+        width: 200px;
+        height: 200px;
+        background-image: url("asset/images/intro_img.png");
+        background-repeat: no-repeat;
+    }
+.intro-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: start;
+    gap: 1rem;
+    margin: auto;
+    position: relative;
+}
+
+.intro-text {
+    grid-column: 2 / span 2;
+}
+
+.sub-intro-text {
+    padding-top: 5rem;
+    grid-column: 4 / span 2;
+}
+
+.intro-art {
+    grid-column: 2 / span 4;
+    grid-row: 2;
+    background-image: url("asset/images/intro_img.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 75vh;
+}
 
 /* Responsive corner SVGs */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     :root {
         --frame-padding: 15px;
     }
@@ -236,5 +248,29 @@ footer a {
     .social-button {
         font-size: 1rem; /* Make buttons smaller */
         padding: 8px 15px;
+    }
+    .intro-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+    .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .intro-text,
+    .sub-intro-text,
+    .intro-art {
+        grid-column: auto;
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .intro-art {
+        height: 250px;
+        background-image: url("asset/images/intro_img.png");
+
     }
 }
