@@ -1,6 +1,5 @@
 :root {
     --frame-padding: 40px; /* 👈 change this value to adjust the border inset */
-}
 html{
     scroll-behavior: auto;
 }
@@ -9,6 +8,18 @@ html{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+    h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    }
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+a:visited{
+    color: inherit;
+    text-decoration: none;
 }
 body, html {
     height: 100%;
@@ -39,59 +50,112 @@ body, html {
     background: linear-gradient(180deg, #FFFBF2 0%,#FFE2FB 50%, #C5E5FD 100%);
 
 }
-
+.logo-wrapper p{
+    text-decoration: none;
+}
 .projects{
-    background: #f2e5ff;
+    background: white;
 }
 .content {
     max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: start;
     margin: 0 auto;
 }
 
+.projects-content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Apply the same 6-column grid */
+    gap: 1rem; /* Consistent gap */
+    margin: auto; /* Centers the content */
+}
+
+.projects-heading {
+    /* The heading "latest work and case study" starts at column 2 and spans across */
+    grid-column: 2 / span 4;
+    text-align: left; /* Aligns text to the start of its grid area */
+}
+
 .project-list {
-    display: flex;
-    flex-wrap: wrap;
+    grid-column: 2 / span 4; /* Starts at grid line 2, spans 4 columns */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    justify-content: center;
-    margin-top: 30px;
+}
+
+.project-image {
+    background: black;
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: .4s ease;
+}
+.project-image:hover{
+    border-radius: 40px;
 }
 
 .project-card {
-    background-color: #f3f0ff;
-    border: 1px solid #ccc;
-    border-radius: 12px;
-    padding: 20px;
-    width: 250px;
-    box-shadow: 2px 4px 10px rgba(0,0,0,0.1);
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    text-decoration: none;
 }
-
-.logo-carousel {
-    margin-top: 40px;
+a:visited {
+    color: inherit;  /* Or any color you prefer */
+    text-decoration: none;
 }
-
-.carousel-track {
+.project-description-wrapper{
     display: flex;
-    gap: 30px;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: start;
+}
+.contact-wrapper{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    gap: .4rem;
+}
+.contact-wrapper h3 a {
+    color: #2A2A2A;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-.carousel-track img {
-    height: 60px;
-    width: auto;
-    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.1));
+.ornament {
+    width: 2rem;
+    /* Position the ornament. You might want to place this relative to its own content. */
+    /* For consistent grid placement, you could also define its grid-column. */
+    grid-column: 2; /* Example: Place it at the start of your content grid */
+    margin-bottom: 1rem; /* Space below it */
 }
 
+/* Global Section Styling (ensure consistency for padding) */
+.section {
+    padding: 50px 0; /* Example padding, adjust as needed */
+    /* Remove any horizontal padding that might conflict with the grid's margin: auto */
+}
 footer.contact {
-    background: #3F0076;
-    color: white;
+    background: linear-gradient(180deg, #FFF6E3 0%, #FFE2FB 62.98%), #014164;
+    color: #2A2A2A;
     padding-bottom: 60px;
 }
 
 footer a {
-    color: #FFE2FB;
-    text-decoration: underline;
+    color: #2A2A2A;
+    text-decoration: none;
+    transition: .4s ease;
+}
+footer h4 {
+    transition: .4s ease;
+
+}
+footer h4:hover {
+    font-weight: 900;
+    translate: 0 -.3rem;
 }
 
 .logo-wrapper{
@@ -109,6 +173,10 @@ footer a {
     padding:  1rem 2rem 0 2rem;
     background: #FFFBF2;
 }
+.portfolio{
+    background: white;
+}
+
 .nav-menu{
     display: flex;
     gap:2rem;
@@ -132,7 +200,7 @@ footer a {
     overflow: hidden;
 }
 .nav-menu li:hover{
-    translate: 0 -.5rem;
+    translate: 0 -.2rem;
     font-weight: 900;
 }
 .navigation{
@@ -149,6 +217,7 @@ footer a {
         flex-direction: column;
         align-items: start;
     }
+
     .sub-intro-text{
         display: flex;
         flex-direction: column;
@@ -156,6 +225,7 @@ footer a {
     }
     .sub-intro-text p{
         text-align: start;
+        font-size: 1rem;
     }
     .work-button{
         padding: .7rem;
@@ -170,7 +240,7 @@ footer a {
     }
     .work-button:hover{
         background: #b6b6b6;
-        translate: 0 -.5rem;
+        translate: 0 -.3rem;
     }
 .work-button a{
     align-items: center;
@@ -190,6 +260,14 @@ footer a {
         background-image: url("asset/images/intro_img.png");
         background-repeat: no-repeat;
     }
+.intro-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: start;
+    gap: 1rem;
+    margin: auto;
+    position: relative;
+}
 .intro-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -219,6 +297,98 @@ footer a {
     height: 75vh;
 }
 
+.project-content-detail {
+    display: flex;
+    flex-direction: column;
+}
+.project-text{
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+.banner{
+    margin: 2rem 0;
+    width: auto;
+}
+hr{
+    border-width:0;
+    height:2px;
+    color:gray;background-color:#E4E4E4
+}
+
+.article{
+    background: #F4F4F4;
+}
+.article-body {
+    display: grid;
+    /* Create two equal columns for the article content */
+    grid-template-columns: 1fr 1fr; /* Or repeat(2, 1fr) */
+    gap: 20px; /* Gap between the two columns */
+    align-items: start; /* Align content to the top of its cells */
+}
+.article-body .ornament{
+    grid-column: 1 / span 4;
+}
+.article-body h1,
+.article-body .banner {
+    grid-column: 1 / -1; /* Start at the first column line and span to the last (-1) */
+    width: 100%; /* Ensure they take full width of their grid area */
+}
+.article p{
+    text-align: justify;
+}
+
+/* The new wrapper for all text content, placed in the first column */
+.article-text-content {
+    grid-column: 1 / span 1; /* Start at column 1 and span only 1 column */
+    /* Add any specific styling for your text block here, like max-width or padding */
+}
+
+/* Optional: Styles for your images/banners within the article */
+.article-body .banner {
+    height: auto; /* Allow height to adjust to maintain aspect ratio */
+    max-width: 100%; /* Ensure it fits within its grid area */
+    object-fit: cover; /* Crop if necessary to fill the space */
+    margin-top: 20px; /* Add some space above images */
+    margin-bottom: 20px; /* Add some space below images */
+}
+
+/* Optional: Adjust heading margin if needed */
+.article-body h1 {
+    margin-bottom: 20px;
+}
+.article-content-wrapper .content {
+    grid-column: 1 / span 4; /* Occupy the central 4 columns, matching your project section */
+}
+
+.page-transition-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #FFF6E3 0%, #FFE2FB 62.98%), #014164;
+    z-index: 9999;
+    pointer-events: none;
+    transform: translateY(0%); /* cover by default */
+    will-change: transform;
+}
+.page-transition-overlay .logo{
+    scale: 2;
+}
+
+
+/* When active, the overlay slides down */
+.page-transition-overlay.active {
+    transform: translateY(0%);
+    pointer-events: auto;
+}
+
+
 /* Responsive corner SVGs */
 @media (max-width: 700px) {
     :root {
@@ -235,6 +405,7 @@ footer a {
     .corner img {
         object-fit: contain;
     }
+
 
     .section {
         padding: 50px 15px; /* Adjust padding */
@@ -273,4 +444,29 @@ footer a {
         background-image: url("asset/images/intro_img.png");
 
     }
+    .header{
+        padding: 1rem 1rem 0 1rem;
+    }
+    .nav-menu{
+        display: none;
+    }
+    .projects-content-wrapper{
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .project-list{
+        grid-template-columns: 1fr;
+    }
+    .article-body {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* Gap between the two columns */
+        align-items: start; /* Align content to the top of its cells */
+    }
+    /*.project-list {*/
+    /*    grid-column: 2 / span 4; !* Starts at grid line 2, spans 4 columns *!*/
+    /*    display: grid;*/
+    /*    grid-template-columns: 1fr;*/
+    /*    gap: 20px;*/
+    /*}*/
 }

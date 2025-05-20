@@ -6,11 +6,15 @@
     <title>Border Frame</title>
     <link rel="stylesheet" href="styles.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+<div class="page-transition-overlay">
+    <img class="logo" src="asset/vectors/logo_1.svg" alt="logo">
+</div>
     <div class="header">
         <div class="logo-wrapper">
             <img class="logo" src="asset/vectors/logo_1.svg" alt="logo">
@@ -19,9 +23,7 @@
 
         <div class="navigation">
             <ul class="nav-menu">
-                <li href="#"><a> home </a></li>
-                <li href="#"><a> projects </a></li>
-                <li href="#"><a> contact </a></li>
+                <li href="#" id="scroll-to-contact"><a> contact </a></li>
             </ul>
         </div>
     </div>
@@ -37,8 +39,8 @@
                 <p>
                     Transforming your creative vision into standout digital designs for a world that never stops changing.
                 </p>
-                <a class="work-button">
-                    <p>see my works</p><i class="ri-arrow-right-up-line"></i>
+                <a class="work-button" id="scroll-to-projects">
+                    <h4>see my works</h4><i class="ri-arrow-right-up-line"></i>
                 </a>
             </div>
         </div>
@@ -46,49 +48,68 @@
 
     </section>
 
-    <!-- About Me Section -->
-    <section class="section about" id="about">
-        <div class="content">
-            <h2>About Me</h2>
-            <p>
-                I'm a creative developer passionate about motion, visuals, and user experience.
-                I turn ideas into interactive experiences through code and design.
-            </p>
-        </div>
-    </section>
-
     <!-- Projects Section -->
     <section class="section projects" id="projects">
-        <div class="content">
-            <h2>Projects</h2>
-            <div class="project-list">
-                <div class="project-card">Project 1</div>
-                <div class="project-card">Project 2</div>
-                <div class="project-card">Project 3</div>
-                <!-- Add more as needed -->
-            </div>
+        <div class="projects-content-wrapper"> <img class="ornament" src="asset/vectors/ornament.svg" alt="ornament">
+            <h1 class="projects-heading">latest work <br>and case study</h1> <div class="project-list">
+                <a class="project-card" href="project1.html">
+                    <img class="project-image" src="asset/images/placeholder_image.png" alt="projects" />
+                    <div class="project-description-wrapper">
+                        <p>2024</p>
+                        <h4>Project Name</h4>
+                    </div>
+                </a>
 
-            <div class="logo-carousel">
-                <h3>Made for Caronsoul</h3>
-                <div class="carousel-track">
-                    <!-- Placeholder logos -->
-                    <img src="asset/logos/logo1.svg" alt="Logo 1" />
-                    <img src="asset/logos/logo2.svg" alt="Logo 2" />
-                    <img src="asset/logos/logo3.svg" alt="Logo 3" />
+                <div class="project-card">
+                    <img class="project-image" src="asset/images/placeholder_image.png" alt="projects" />
+                    <div class="project-description-wrapper">
+                        <p>2024</p>
+                        <h4>Project Name</h4>
+                    </div>
                 </div>
+
+                <div class="project-card">
+                    <img class="project-image" src="asset/images/placeholder_image.png" alt="projects" />
+                    <div class="project-description-wrapper">
+                        <p>2024</p>
+                        <h4>Project Name</h4>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img class="project-image" src="asset/images/placeholder_image.png" alt="projects" />
+                    <div class="project-description-wrapper">
+                        <p>2024</p>
+                        <h4>Project Name</h4>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
     <!-- Contact Footer -->
     <footer class="section contact" id="contact">
-        <div class="content">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
-            <p>Location: Phnom Penh, Cambodia</p>
-            <!-- Reuse your social buttons if you like -->
+
+        <div class="contact-content-wrapper">
+            <div class="content">
+            <img class="ornament" src="asset/vectors/ornament.svg" alt="ornament">
+            <h1 class="projects-heading">stay<br>connected</h1> <div class="project-list">
+                <div class="contact-wrapper">
+                    <p>email address</p>
+                    <h4><a href="mailto:moeunsmonydeth@gmail.com">moeunsmonydeth@gmail.com</a></h4>
+                </div>
+                <div class="contact-wrapper">
+                    <p>email address</p>
+                    <h4><a href="https://www.w3schools.com/html/html_links.asp">LinkedIn</a></h4>
+                    <h4><a href="https://www.facebook.com/mony.deth46">Facebook</a></h4>
+                    <h4><a href="https://www.behance.net/monydeth">Behance</a></h4>
+                </div>
+            </div>
+        </div>
         </div>
     </footer>
+<script src="index.js"></script>
 
 </body>
 </html>
