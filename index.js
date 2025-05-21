@@ -1,20 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
     const overlay = document.querySelector('.page-transition-overlay');
-    // -- PREVENT FLASH: Keep overlay covering until content is ready --
-    gsap.set(overlay, { y: 0 });
 
-    // --- Animate overlay out (bottom to top) ---
+    // --- Ensure overlay is fully covering on load ---
+    gsap.set(overlay, { y: 0 });
+    overlay.style.pointerEvents = 'auto';
+
+    // --- Wait 1s before animating overlay away ---
     gsap.to(overlay, {
+        delay: .5, // ⏱️ hold the overlay visible for 1 second
         duration: 1,
-        y: "100%", // move up and reveal content
-        ease: "power2.inOut",
-        delay: 0.1, // slight delay for a cleaner effect
+        y: "-100%", // move overlay upward to reveal content
+        ease: "power4.in",
         onComplete: () => {
             overlay.style.pointerEvents = 'none';
         }
     });
 
-    // --- Handle link clicks and wipe-in before leaving ---
+    // --- Handle link clicks and animate overlay in before leaving ---
     const links = document.querySelectorAll(
         'a[href]:not([href^="#"]):not([href^="mailto:"]):not([href^="http"])'
     );
@@ -29,12 +31,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetUrl = link.href;
 
             overlay.style.pointerEvents = 'auto';
-            gsap.set(overlay, { y: "100%" }); // start below view
+            gsap.set(overlay, { y: "100%" }); // start below screen
 
             gsap.to(overlay, {
                 duration: 1,
-                y: "0%", // slide up to cover content
-                ease: "power2.inOut",
+                y: "0%", // move overlay up to cover content
+                ease: "power4.out",
                 onComplete: () => {
                     window.location.href = targetUrl;
                 }
